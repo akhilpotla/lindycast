@@ -1,7 +1,6 @@
 import React from 'react';
+import ReactTable from 'react-table';
 import episodes from '../episodes.json';
-
-import Episode from './Episode.js';
 
 class EpisodesList extends React.Component {
     render() {
@@ -13,10 +12,17 @@ class EpisodesList extends React.Component {
     }
 }
 
+const columns = [{
+    Header: 'Date',
+    accessor: 'date'
+}, {
+    Header: 'Watch Here',
+    accessor: 'link',
+    Cell: props =><a className="App-link"  href={props.original.link} target="_blank" rel="noopener noreferrer">Watch</a>
+}];
+
 function renderEpisodes() {
-    return episodes.map(function (episode){
-        return <Episode date={episode['date']} />;
-    });
+    return <ReactTable data ={episodes} columns={columns}/>;
 }
 
 export default EpisodesList;
