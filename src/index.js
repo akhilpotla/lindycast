@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'react-table/react-table.css';
+import './custom.scss';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
