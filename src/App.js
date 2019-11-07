@@ -10,7 +10,7 @@ function App() {
   return (
     <Container>
        <div className="App">
-         <h1>Lindycast.tk</h1>
+         <h1>lindycast.tk</h1>
          <header className="App-header">
            <img src={skallas} className="App-logo" alt="logo" />
            <p>All Lindy Cast Episodes</p>
